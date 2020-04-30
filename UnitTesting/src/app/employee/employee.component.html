@@ -1,0 +1,33 @@
+<body>
+<h3> {{text}} </h3>
+<form id="contact-form" [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label class="center-block"> 
+            First Name:
+            <input class="form-control" formControlName="firstName">
+        </label><br><br>
+        <label class="center-block"> 
+            Last Name:
+            <input class="form-control" formControlName="lastName">
+        </label><br><br>
+        <label class="center-block"> 
+            Salary:
+            <input class="form-control" formControlName="salary">
+        </label><br><br>
+        <label class="center-block"> 
+            Street 1:
+            <input class="form-control" formControlName="street1">
+        </label><br><br>
+        <label class="center-block"> 
+            Street 2:
+            <input class="form-control" formControlName="street2">
+        </label><br><br>
+        <label class="center-block"> 
+            Location:
+            <input class="form-control" formControlName="location">
+        </label><br><br>
+    </div>
+    <button type="submit"
+    [disabled]="!employeeForm.valid" class="btn btn-success">Save</button>
+</form>
+</body>
